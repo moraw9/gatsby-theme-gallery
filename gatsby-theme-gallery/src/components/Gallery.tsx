@@ -3,7 +3,7 @@ import * as React from "react";
 import { jsx } from "theme-ui";
 import Img from "gatsby-image";
 import { Lightbox } from "react-modal-image";
-import useGallery from "../hooks/useGallery";
+import { FluidObject } from "gatsby-image";
 import Grid from "./Grid";
 import Tile from "./Tile";
 
@@ -21,9 +21,22 @@ const imgStyles: any = {
     },
   },
 };
+interface Query {
+  allFile: {
+    nodes: {
+      id: string;
+      name: string;
+      publicURL: string;
+      childImageSharp: {
+        fluid: FluidObject;
+      };
+    }[];
+  };
+}
 
-const Gallery = () => {
-  const images = useGallery();
+const Gallery = ({ data }: { data: Query }) => {
+  const images = data.allFile.nodes;
+  console.log({ images });
   const [showImageIndex, setShowImageIndex] = React.useState<
     number | undefined
   >(undefined);
@@ -38,7 +51,11 @@ const Gallery = () => {
               setShowImageIndex(index);
             }}
           >
-            <Img alt={image.name} fluid={image.fluid} {...imgStyles} />
+            <Img
+              alt={image.name}
+              fluid={image.childImageSharp.fluid}
+              {...imgStyles}
+            />
           </Tile>
         ))}
       </Grid>

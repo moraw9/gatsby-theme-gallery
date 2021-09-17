@@ -19,13 +19,14 @@ module.exports = {
     ],
   },
   plugins: [
-    "gatsby-theme-gallery",
-    // {
-    //   resolve: "gatsby-theme-gallery",
-    //   options: {
-    //     basePath: "/gallery",
-    //   },
-    // },
+    // "gatsby-theme-gallery",
+    {
+      resolve: "gatsby-theme-gallery",
+      options: {
+        basePath: "/gallery",
+        galleryPath: "hello123",
+      },
+    },
     "gatsby-plugin-typescript",
     "gatsby-plugin-emotion",
   ],
