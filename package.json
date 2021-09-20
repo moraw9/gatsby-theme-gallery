@@ -1,5 +1,4 @@
 {
-  "private": true,
   "workspaces": [
     "demo",
     "gatsby-theme-gallery"
