@@ -1,0 +1,65 @@
+{
+  "errors": [],
+  "warnings": [],
+  "namedChunkGroups": {
+    "polyfill": {
+      "chunks": [0, 5],
+      "assets": [
+        "webpack-runtime-8bc8af0e00e72b8371fd.js",
+        "webpack-runtime-8bc8af0e00e72b8371fd.js.map",
+        "polyfill-41bcd03cde0bdcd345d2.js",
+        "polyfill-41bcd03cde0bdcd345d2.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app": {
+      "chunks": [0, 4, 1],
+      "assets": [
+        "webpack-runtime-8bc8af0e00e72b8371fd.js",
+        "webpack-runtime-8bc8af0e00e72b8371fd.js.map",
+        "framework-2590baa16fdca3d8a51b.js",
+        "framework-2590baa16fdca3d8a51b.js.map",
+        "app-86d93ad4faa8c3a5d835.js",
+        "app-86d93ad4faa8c3a5d835.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "component---gatsby-theme-gallery-src-pages-index-tsx": {
+      "chunks": [2],
+      "assets": [
+        "component---gatsby-theme-gallery-src-pages-index-tsx-874f5c1009a24d563948.js",
+        "component---gatsby-theme-gallery-src-pages-index-tsx-874f5c1009a24d563948.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-404-tsx": {
+      "chunks": [3],
+      "assets": [
+        "component---src-pages-404-tsx-44e9464c7806d29d8b70.js",
+        "component---src-pages-404-tsx-44e9464c7806d29d8b70.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "assetsByChunkName": {
+    "polyfill": [
+      "webpack-runtime-8bc8af0e00e72b8371fd.js",
+      "polyfill-41bcd03cde0bdcd345d2.js"
+    ],
+    "app": [
+      "webpack-runtime-8bc8af0e00e72b8371fd.js",
+      "framework-2590baa16fdca3d8a51b.js",
+      "app-86d93ad4faa8c3a5d835.js"
+    ],
+    "component---gatsby-theme-gallery-src-pages-index-tsx": [
+      "component---gatsby-theme-gallery-src-pages-index-tsx-874f5c1009a24d563948.js"
+    ],
+    "component---src-pages-404-tsx": [
+      "component---src-pages-404-tsx-44e9464c7806d29d8b70.js"
+    ]
+  }
+}
