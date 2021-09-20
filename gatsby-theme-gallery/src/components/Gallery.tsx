@@ -3,7 +3,8 @@ import * as React from "react";
 import { jsx } from "theme-ui";
 import Img from "gatsby-image";
 import { Lightbox } from "react-modal-image";
-import { FluidObject } from "gatsby-image";
+
+import * as types from "../common/types";
 import Grid from "./Grid";
 import Tile from "./Tile";
 
@@ -21,22 +22,9 @@ const imgStyles: any = {
     },
   },
 };
-interface Query {
-  allFile: {
-    nodes: {
-      id: string;
-      name: string;
-      publicURL: string;
-      childImageSharp: {
-        fluid: FluidObject;
-      };
-    }[];
-  };
-}
 
-const Gallery = ({ data }: { data: Query }) => {
-  const images = data.allFile.nodes;
-  console.log({ images });
+const Gallery = ({ imagesData }: { imagesData: types.Query }) => {
+  const images = imagesData.allFile.nodes;
   const [showImageIndex, setShowImageIndex] = React.useState<
     number | undefined
   >(undefined);

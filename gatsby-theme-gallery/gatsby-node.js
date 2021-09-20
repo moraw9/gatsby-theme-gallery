@@ -14,10 +14,8 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
 };
 
 exports.createPages = ({ actions }, themeOptions) => {
-  console.log("w create Pages", { themeOptions });
   const { createPage } = actions;
   const { basePath } = themeOptions;
-  console.log("themeOptions.galleryPath", themeOptions.galleryPath, basePath);
 
   createPage({
     path: basePath || "/",
@@ -26,25 +24,4 @@ exports.createPages = ({ actions }, themeOptions) => {
       galleryPath: themeOptions.galleryPath,
     },
   });
-  // createPage({
-  //   path:  "/test",
-  //   component: path.resolve(`${__dirname}/src/pages/Test.tsx`),
-  //   context: {
-  //     product: 'node',
-  //   },
-  // });
-
-  // exports.onCreatePage = ({ page, actions }) => {
-  //   const { createPage, deletePage } = actions
-
-  //   deletePage(page)
-  //   // You can access the variable "house" in your page queries now
-  //   createPage({
-  //     ...page,
-  //     context: {
-  //       ...page.context,
-  //       product: 'node',
-  //     },
-  //   })
-  // }
 };
